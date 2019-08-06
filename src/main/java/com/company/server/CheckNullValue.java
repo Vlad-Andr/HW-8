@@ -1,21 +1,14 @@
 package com.company.server;
 
-import com.company.exception.ExceptionForNullValue;
-
-
-
-public class CheckNullValue extends ExceptionForNullValue {
-    public CheckNullValue(String message) {
+public class CheckNullValue extends NullPointerException {
+  /*  public CheckNullValue(String message) {
         super(message);
-    }
-
-    public void checkobjNULL(Object o) throws ExceptionForNullValue {
-
+    }*/
+    public void checkOnNull(Object o) throws NullPointerException {
             if (o == null) {
-                throw new ExceptionForNullValue("Error : object value is null");
+                throw new NullPointerException("Error : object value is null");
             } else {
                 System.out.println("GIVEN VALUE IS NOT NULL \n");
             }
-
         }
     }

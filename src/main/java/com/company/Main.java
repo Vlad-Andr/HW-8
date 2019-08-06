@@ -1,12 +1,9 @@
 package com.company;
-
-import com.company.exception.ExceptionForNullValue;
-import com.company.exception.ExceptionForOddNumber;
-import com.company.exception.ExceptionForPalindrome;
+import com.company.exception.OddNumberException;
+import com.company.exception.PalindromeException;
 
 public class Main {
-
-    public static void main(String[] args) throws ExceptionForPalindrome, ExceptionForOddNumber, ExceptionForNullValue {
+    public static void main(String[] args) throws PalindromeException, OddNumberException{
         ReliseException.runException();
     }
 }

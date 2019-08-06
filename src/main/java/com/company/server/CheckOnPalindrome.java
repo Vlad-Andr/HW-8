@@ -1,15 +1,13 @@
 package com.company.server;
-
-import com.company.exception.ExceptionForPalindrome;
-
+import com.company.exception.PalindromeException;
 import java.util.Scanner;
 
-public class CheckOnPalindrome extends ExceptionForPalindrome {
+public class CheckOnPalindrome extends PalindromeException {
     public CheckOnPalindrome(String message) {
         super(message);
     }
 
-    public void checkOnPolindrome() throws ExceptionForPalindrome {
+    public void checkOnPolindrome() throws PalindromeException {
         Scanner in=new Scanner(System.in);
         System.out.print("ENTER YOUR STRING: ");
         String a=in.nextLine();
@@ -23,7 +21,7 @@ public class CheckOnPalindrome extends ExceptionForPalindrome {
                 System.out.println("ITS A PALINDROME \n");
             }
             else {
-                throw new ExceptionForPalindrome("Error : It`s a not palindrome");
+                throw new PalindromeException("Error : It`s a not palindrome");
             }
         }
     }
